@@ -1,0 +1,17 @@
+import { auth } from "@/auth";
+import { SessionProvider } from "next-auth/react";
+import React, { FC, ReactNode } from "react";
+
+interface AuthLayoutProps {
+  children: ReactNode;
+}
+
+const AuthLayout: FC<AuthLayoutProps> = async ({ children }) => {
+  return (
+    <div className="h-full flex items-center justify-center  bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
+      {children}
+    </div>
+  );
+};
+
+export default AuthLayout;
